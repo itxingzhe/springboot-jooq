@@ -19,7 +19,9 @@
       <name>org.jooq.meta.mysql.MySQLDatabase</name>
 
       <!--include和exclude用于控制为数据库中哪些表生成代码-->
-      <includes>.*</includes>
+      <!--<includes>.*</includes>-->
+      <!-- JAVA 正则匹配表格 -->
+      <includes>^p_.*$</includes>
       <!--<excludes></excludes>-->
 
       <!--数据库名称-->
