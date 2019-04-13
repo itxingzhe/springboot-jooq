@@ -92,8 +92,6 @@
       <version>${aspectj.version}</version>
     </dependency>
 
-
-
   </dependencies>
 
   <build>
@@ -101,6 +99,29 @@
       <plugin>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
+      </plugin>
+
+      <plugin>
+        <groupId>org.jooq</groupId>
+        <artifactId>jooq-codegen-maven</artifactId>
+        <version>${jooq.version}</version>
+        <executions>
+          <execution>
+            <goals>
+              <goal>generate</goal>
+            </goals>
+          </execution>
+        </executions>
+        <dependencies>
+          <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${mysql.version}</version>
+          </dependency>
+        </dependencies>
+        <configuration>
+          <configurationFile>src/main/resources/jooq-config.xml</configurationFile>
+        </configuration>
       </plugin>
     </plugins>
   </build>
