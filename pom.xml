@@ -23,6 +23,7 @@
     <jooq.version>3.11.11</jooq.version>
     <aspectj.version>1.9.3</aspectj.version>
     <lombok.version>1.16.20</lombok.version>
+    <qiniu.version>7.2.17</qiniu.version>
   </properties>
 
   <dependencies>
@@ -90,6 +91,11 @@
       <groupId>org.aspectj</groupId>
       <artifactId>aspectjweaver</artifactId>
       <version>${aspectj.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.qiniu</groupId>
+      <artifactId>qiniu-java-sdk</artifactId>
+      <version>${qiniu.version}</version>
     </dependency>
 
   </dependencies>
