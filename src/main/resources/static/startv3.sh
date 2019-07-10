@@ -23,7 +23,7 @@ line=0
 read -p "请输入服务名称: " servername
 
 read -p "请输入版本号: " ver
-if [ ! -n ${ver} ] ;then
+if [ ! -n "${ver}" ] ;then
 	echo "默认版本号为：1.0"
 else
 	version="-"${ver}"-SNAPSHOT.jar"
